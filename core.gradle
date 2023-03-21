@@ -1,0 +1,42 @@
+android {
+    compileSdkVersion core.sdkVersion
+    defaultConfig {
+        minSdk core.sdkMinVersion
+        targetSdk core.sdkVersion
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String", "URL", '"Mock-Response"'
+        }
+        homolog {
+            buildConfigField "String", "URL",' "Real-Response"'
+        }
+        release {
+            buildConfigField "String", "URL", '"Real-Response"'
+        }
+    }
+    flavorDimensions "type"
+    productFlavors {
+        normal {
+            dimension 'type'
+        }
+        lite {
+            dimension 'type'
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
