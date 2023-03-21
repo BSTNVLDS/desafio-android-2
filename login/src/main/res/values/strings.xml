@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="app_name_lite">Notes Lite</string>
+    <string name="login_text">iniciar sesión</string>
+    <string name="login_field_sing_up">Registrate aquí</string>
+    <string name="login_field_forget">¿Cambiar contraseña?</string>
+    <string name="register_text">Registro</string>
+    <string name="btn_register_text">registrarse</string>
+    <string name="field_email">Correo electronico</string>
+    <string name="field_password">Contraseña</string>
+    <string name="field_password_confirm">Confirmar contraseña</string>
+    <string name="field_user_name">Nombre de usuario</string>
+    <string name="margin">|</string>
+</resources>
