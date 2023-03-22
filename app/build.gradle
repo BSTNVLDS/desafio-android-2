@@ -4,22 +4,29 @@ plugins {
 }
 
 android {
-    compileSdk 32
-
+    compileSdk core.sdkVersion
     defaultConfig {
         applicationId "com.accenture.desafioandroidtwo"
-        minSdk 21
-        targetSdk 32
+        minSdk core.sdkMinVersion
+        targetSdk core.sdkVersion
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
+        debug {
+            applicationIdSuffix = ".debug"
+            debuggable true
+        }
+        homolog {
+            applicationIdSuffix = ".homolog"
+            debuggable true
+        }
         release {
+            applicationIdSuffix = ".release"
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.normal'
         }
     }
     compileOptions {
@@ -29,15 +36,27 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
+    flavorDimensions "type"
+    productFlavors {
+        normal {
+            applicationIdSuffix = ".normal"
+            dimension 'type'
+            versionNameSuffix '.n'
+        }
+        lite {
+            applicationIdSuffix = ".lite"
+            dimension 'type'
+            versionNameSuffix '.l'
+        }
+    }
 }
 
 dependencies {
-
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation project(path: ':base')
+    implementation project(path: ':home')
+    implementation project(path: ':login')
+    implementation project(path: ':note')
 }
