@@ -14,3 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "DesafioAndroidTwo"
 include ':app'
+include ':base'
+include ':login'
+include ':home'
+include ':note'
