@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/Layout.Vertical"
+            android:layout_marginHorizontal="10dp"
+            android:paddingTop="70dp"
+            android:paddingBottom="60dp">
+
+            <TextView
+                style="@style/TextViewTitle.46"
+                android:text="@string/app_name_lite" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputEmail"
+                style="@style/MaterialEditText.100"
+                android:hint="@string/field_email"
+                app:counterMaxLength="100"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="100" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputPassword"
+                style="@style/MaterialEditText.30"
+                android:hint="@string/field_password"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:maxLength="30" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/singUp"
+                style="@style/Button.20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30dp"
+                android:text="@string/login_text" />
+
+            <LinearLayout
+                style="@style/Layout.Horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/singIn"
+                    style="@style/TextViewLink.18"
+                    android:text="@string/login_field_sing_up" />
+
+                <TextView
+                    style="@style/TextViewLink.20"
+                    android:layout_marginHorizontal="5dp"
+                    android:text="@string/margin" />
+
+                <TextView
+                    android:id="@+id/resetPassword"
+                    style="@style/TextViewLink.18"
+                    android:text="@string/login_field_forget" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
