@@ -5,6 +5,7 @@
         <item name="colorOnPrimary">@color/white</item>
         <item name="customColorValue">@color/white_shadow</item>
         <item name="customColorDrawableValue">@color/orange</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
         <item name="colorSecondary">@color/orange_center</item>
         <item name="colorSecondaryVariant">?attr/colorPrimaryVariant</item>
         <item name="colorOnSecondary">@color/black</item>
