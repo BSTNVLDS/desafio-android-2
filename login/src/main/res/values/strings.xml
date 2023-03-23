@@ -11,4 +11,6 @@
     <string name="field_password_confirm">Confirmar contraseña</string>
     <string name="field_user_name">Nombre de usuario</string>
     <string name="margin">|</string>
+    <string name="helper_text_password">"Tu contraseña debe tener mínimo 6 caracteres"</string>
+    <string name="text_bottom_back"> Volver</string>
 </resources>
