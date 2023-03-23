@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -12,6 +13,14 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            keyAlias System.getenv("KEY_ALIAS_NOTE")
+            keyPassword System.getenv("KEY_PASSWORD_NOTE")
+            storeFile file(String.valueOf(System.getenv("KEY_STORE_PATH_NOTE")))
+            storePassword System.getenv("KEY_STORE_PASSWORD_NOTE")
+        }
     }
 
     buildTypes {
