@@ -17,13 +17,8 @@ import com.accenture.base.extensions.bottomSheet
 import com.accenture.base.extensions.isValid
 import com.accenture.base.model.ApiState
 import com.accenture.base.model.User
-import com.accenture.login.ACTION_FIELDS
-import com.accenture.login.INFO_EMAIL_CONCAT
 import com.accenture.base.model.ResultApiState
-import com.accenture.login.ACTION_SING_IN
-import com.accenture.login.INFO_EMAIL_IN
-import com.accenture.login.INFO_VALID_TIME
-import com.accenture.login.R
+import com.accenture.login.*
 import com.accenture.login.databinding.FragmentLoginBinding
 import com.accenture.login.viewmodel.LoginViewModel
 
@@ -44,7 +39,13 @@ class LoginFragment : Fragment() {
 
     private fun initView() {
         binding.singUp.setOnClickListener {
-            singUp()
+            if (BuildConfig.BUILD_TYPE == "debug") {
+                findNavController().navigate(R.id.action_login_to_home)
+            } else {
+                singUp()
+            }
+
+
         }
         binding.singIn.setOnClickListener {
             findNavController().navigate(R.id.action_login_to_form)
@@ -70,7 +71,7 @@ class LoginFragment : Fragment() {
             }
             is ApiState.Success -> {
                 proDialogStop()
-                childFragmentManager.bottomSheet(INFO_EMAIL_CONCAT+binding.inputEmail)
+                childFragmentManager.bottomSheet(INFO_EMAIL_CONCAT + binding.inputEmail)
             }
             else -> {
                 proDialogStop()
