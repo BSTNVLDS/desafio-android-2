@@ -2,7 +2,7 @@
 ## Descripción
 Aplicacion de notas.
 ### Informacion
-Multimodulo, soporta modo oscuro y cuenta con dos "flavor"
+Multimodulo,FireBase, soporta modo oscuro y cuenta con dos "flavor"
 
 ## Version: Normal Light
 ![la1](https://github.com/BSTNVLDS/desafio-android-2/blob/develop//1a.png?raw=true)
@@ -19,3 +19,8 @@ Multimodulo, soporta modo oscuro y cuenta con dos "flavor"
 ![lc2](https://github.com/BSTNVLDS/desafio-android-2/blob/develop//c2.png?raw=true)
 ![lc3](https://github.com/BSTNVLDS/desafio-android-2/blob/develop//c3.png?raw=true)
 ![lc4](https://github.com/BSTNVLDS/desafio-android-2/blob/develop//c4.png?raw=true)
+## Version: Lite Dark
+![ld1](https://github.com/BSTNVLDS/desafio-android-2/blob/develop//d1.png?raw=true)
+![ld2](https://github.com/BSTNVLDS/desafio-android-2/blob/develop//d2.png?raw=true)
+![ld3](https://github.com/BSTNVLDS/desafio-android-2/blob/develop//d3.png?raw=true)
+![ld4](https://github.com/BSTNVLDS/desafio-android-2/blob/develop//d4.png?raw=true)
