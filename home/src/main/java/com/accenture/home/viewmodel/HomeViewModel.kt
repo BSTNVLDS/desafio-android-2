@@ -15,14 +15,14 @@ class HomeViewModel : ViewModel() {
 
     val state = MutableLiveData<ApiState<Exception?>>()
 
-    fun load() {
+    fun load(userId:String) {
         val database = FirebaseDatabase.getInstance()
         val reference = database.getReference(PATH_NOTE)
         reference.addChildEventListener(object : ChildEventListener {
             override fun onChildAdded(dataSnapshot: DataSnapshot, s: String?) {
                 val note: Note? = dataSnapshot.getValue(Note::class.java)
                 if (!NotesService.notes.contains(note)) {
-                    if (note?.user == "null") {
+                    if (note?.user == userId) {
                         NotesService.addNote(note)
                     }
                 }
@@ -32,7 +32,7 @@ class HomeViewModel : ViewModel() {
             override fun onChildChanged(dataSnapshot: DataSnapshot, s: String?) {
                 val note: Note? = dataSnapshot.getValue(Note::class.java)
                 if (!NotesService.notes.contains(note)) {
-                    if (note?.user == "null") {
+                    if (note?.user == userId) {
                         NotesService.updateNote(note)
                     }
                 }
@@ -43,7 +43,7 @@ class HomeViewModel : ViewModel() {
             override fun onChildRemoved(dataSnapshot: DataSnapshot) {
                 val note: Note? = dataSnapshot.getValue(Note::class.java)
                 if (NotesService.notes.contains(note)) {
-                    if (note?.user == "null") {
+                    if (note?.user == userId) {
                         NotesService.removeNote(note)
                     }
                 }
