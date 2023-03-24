@@ -86,6 +86,9 @@
     <style name="MaterialEditText.100" parent="MaterialEditText">
         <item name="counterMaxLength">100</item>
     </style>
+    <style name="MaterialEditText.1000" parent="MaterialEditText">
+        <item name="counterMaxLength">1000</item>
+    </style>
 
     <style name="Layout">
         <item name="android:layout_gravity">center</item>
