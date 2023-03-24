@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Icon">
+    </style>
+
+    <style name="Icon.Back">
+        <item name="android:src">@drawable/ico_back</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/dimen_15dp</item>
+        <item name="android:layout_marginTop">7dp</item>
+    </style>
+
+    <style name="TextViewLink">
+        <item name="android:shadowColor">@color/shadow</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">?attr/customColorDrawableValue</item>
+        <item name="android:layout_marginTop">@dimen/dimen_15dp</item>
+    </style>
+
+    <style name="TextViewLink.18" parent="TextViewLink">
+        <item name="android:textSize">@dimen/dimen_18sp</item>
+    </style>
+
+    <style name="TextViewLink.20" parent="TextViewLink">
+        <item name="android:textSize">@dimen/dimen_20sp</item>
+    </style>
+
+    <style name="TextViewTitle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:fontFamily">@font/font</item>
+        <item name="android:shadowColor">@color/shadow</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/customColorDrawableValue</item>
+        <item name="android:layout_marginTop">@dimen/dimen_5dp</item>
+    </style>
+
+    <style name="TextViewTitle.36" parent="TextViewTitle">
+        <item name="android:textSize">@dimen/dimen_36sp</item>
+    </style>
+
+    <style name="TextViewTitle.46" parent="TextViewTitle">
+        <item name="android:textSize">@dimen/dimen_46sp</item>
+    </style>
+
+    <style name="TextViewTitle.26" parent="TextViewTitle">
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/dimen_22sp</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:enabled">true</item>
+        <item name="android:layout_marginTop">@dimen/dimen_20dp</item>
+        <item name="android:background">@drawable/btn_round</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Button.20" parent="Button">
+        <item name="android:textSize">@dimen/dimen_20sp</item>
+    </style>
+
+    <style name="MaterialEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginTop">@dimen/dimen_20sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="counterEnabled">true</item>
+        <item name="errorEnabled">true</item>
+        <item name="counterTextColor">?attr/colorOnSecondary</item>
+        <item name="endIconTint">?attr/customColorDrawableValue</item>
+    </style>
+
+    <style name="MaterialEditText.30" parent="MaterialEditText">
+        <item name="counterMaxLength">30</item>
+    </style>
+
+    <style name="MaterialEditText.100" parent="MaterialEditText">
+        <item name="counterMaxLength">100</item>
+    </style>
+
+    <style name="Layout">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="Layout.Vertical" parent="Layout">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Layout.Horizontal" parent="Layout">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/alert_round_bar</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="Theme.Material3.DayNight.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+        <item name="android:textColorHighlight">@color/orange</item>
+        <item name="android:colorBackground">?attr/colorPrimary</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="colorPrimaryDark">@color/orange</item>
+        <item name="android:textColorHighlight">@color/orange</item>
+        <item name="backgroundTint">@color/orange</item>
+        <item name="backgroundColor">@color/orange</item>
+        <item name="android:backgroundTint">@color/orange</item>
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/dimen_16dp</item>
+        <item name="cornerSizeTopLeft">@dimen/dimen_16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+</resources>

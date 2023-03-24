@@ -1,0 +1,18 @@
+package com.accenture.login
+
+const val ACTION_FIELDS = "Complete los campos"
+const val ACTION_MIN_CHARACTERS ="Tu contraseña debe tener minimo 6 caracteres"
+const val ACTION_PASS_EQUALS ="Contraseñas no coinciden"
+const val ERROR_AUTH_INVALID ="Correo no valido"
+const val ACTION_OK = "Aceptar"
+const val PATH_USER = "Usuario"
+const val EXCEPTION_NO_VALID= "no velido"
+const val INFO_PROFILE_TIME ="Creando Perfil..."
+const val INFO_FORMAT_EMAIL= "Revisa que el formato del correo sea correcto"
+const val INFO_PRE_EXISTENCE_USER="el correo ya se encuentra registrado"
+const val INFO_REGISTER_USER="usuario registrado con exito"
+const val INFO_EMAIL_CONCAT="se envio un correo a: "
+const val ACTION_SING_IN = "Iniciando Sesión"
+const val INFO_INFO_EMAIL_CONCAT = "Se envio un correo de verificación al correo: "
+const val INFO_EMAIL_IN = "Ingresa un correo"
+const val INFO_VALID_TIME = "Validando cambio..."

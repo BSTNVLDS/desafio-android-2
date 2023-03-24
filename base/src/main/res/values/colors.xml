@@ -3,9 +3,10 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#202020</color>
     <color name="orange">#FF7700</color>
-    <color name="orange_center">#D1690F</color>
-    <color name="orange_night">#AE3D00</color>
+    <color name="orangecenter">#D1690F</color>
+    <color name="orangeNight">#AE3D00</color>
     <color name="gris">#5C5C5C</color>
+    <color name="shadow">#FFFFFF</color>
     <color name="back_shadow">#B0000000</color>
-    <color name="white_shadow">#BAFFFFFF</color>
+    <color name="white_shadow">#EDFFFFFF</color>
 </resources>
