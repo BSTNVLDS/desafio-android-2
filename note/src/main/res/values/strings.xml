@@ -1,2 +1,7 @@
 <resources>
+    <string name="notes_input_text_title">Titulo</string>
+    <string name="notes_input_text_body">Escribe aqui tu nota</string>
+    <string name="notes_input_text_btn">guardar nota</string>
+    <string name="notes_input_text_toolbar">Mi nota</string>
+    <string name="notes_content_description_toolbar_back">Volver</string>
 </resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_content_description_toolbar_back">Volver</string>
+    <string name="home_title_toolbar_top"> Mis notas</string>
+
+</resources>
