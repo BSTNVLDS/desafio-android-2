@@ -17,8 +17,8 @@ import com.accenture.base.extensions.observe
 import com.accenture.base.extensions.onClickNavigationUp
 import com.accenture.base.extensions.proDialogStop
 import com.accenture.base.model.ApiState
+import com.accenture.base.model.Note
 import com.accenture.note.databinding.FragmentNoteBinding
-import com.accenture.note.model.Note
 import com.accenture.note.viewmodel.NotesViewModel
 
 class NoteFragment : Fragment() {
