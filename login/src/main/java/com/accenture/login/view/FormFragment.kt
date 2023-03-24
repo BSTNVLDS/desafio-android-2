@@ -23,12 +23,12 @@ import com.accenture.base.model.User
 import com.accenture.login.EXCEPTION_NO_VALID
 import com.accenture.login.INFO_REGISTER_USER
 import com.accenture.login.ACTION_OK
-import com.accenture.login.EMPTY_STRING
 import com.accenture.login.INFO_PROFILE_TIME
 import com.accenture.login.INFO_PRE_EXISTENCE_USER
 import com.accenture.login.ERROR_AUTH_INVALID
 import com.accenture.login.INFO_FORMAT_EMAIL
 import com.accenture.login.ACTION_FIELDS
+import com.accenture.login.INFO_INFO_EMAIL_CONCAT
 import com.accenture.login.ACTION_MIN_CHARACTERS
 import com.accenture.login.ACTION_PASS_EQUALS
 import com.accenture.login.databinding.FragmentFormBinding
@@ -66,12 +66,12 @@ class FormFragment : Fragment() {
         when (result) {
             is ApiState.Error -> {
                 proDialogStop()
-                val exception = firebaseError(result.error)
+                val exception = firebaseError(result.exception)
                 childFragmentManager.bottomSheet(exception)
             }
             is ApiState.Success -> {
                 proDialogStop()
-                childFragmentManager.bottomSheet(INFO_REGISTER_USER)
+                showDialogRegister()
             }
             else -> {
                 proDialogStop()
@@ -108,7 +108,6 @@ class FormFragment : Fragment() {
             },
             failed = {
                 val user = User(
-                    id = EMPTY_STRING,
                     userName = binding.inputUserName.fullText(),
                     email = binding.inputEmail.fullText(),
                     pass = binding.inputPassword.fullText(),
@@ -126,4 +125,14 @@ class FormFragment : Fragment() {
         builder.show()
     }
 
+    private fun showDialogRegister() {
+        val builder = requireContext().materialDialog(
+            INFO_REGISTER_USER,
+            INFO_INFO_EMAIL_CONCAT + binding.inputEmail.fullText()
+        )
+        builder.setPositiveButton(ACTION_OK) { dialogInterface, _ ->
+            dialogInterface.dismiss()
+        }
+        builder.show()
+    }
 }
