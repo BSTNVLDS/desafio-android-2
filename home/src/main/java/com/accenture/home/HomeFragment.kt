@@ -8,9 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.accenture.base.extensions.proDialogRun
+import com.accenture.base.extensions.logOut
 import com.accenture.base.extensions.bottomSheet
 import com.accenture.base.extensions.firebaseError
 import com.accenture.base.extensions.observe
@@ -34,9 +33,6 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initComponents()
         initObservable()
-        binding.viewBtnAddNote.setOnClickListener {
-            findNavController().navigate(R.id.action_home_to_note)
-        }
     }
 
     private fun initObservable() {
@@ -64,6 +60,12 @@ class HomeFragment : Fragment() {
     }
 
     private fun initComponents() {
+        binding.btnToolbar.setOnClickListener {
+            requireContext().logOut()
+        }
+        binding.viewBtnAddNote.setOnClickListener {
+            findNavController().navigate(R.id.action_home_to_note)
+        }
         binding.rvNotes.adapter = adapter
         requireContext().proDialogRun(LOADING)
         homeViewModel.load()
