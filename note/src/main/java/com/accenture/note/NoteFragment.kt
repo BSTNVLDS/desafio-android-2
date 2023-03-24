@@ -8,14 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.accenture.base.ACTION_FIELDS
-import com.accenture.base.extensions.bottomSheet
-import com.accenture.base.extensions.proDialogRun
-import com.accenture.base.extensions.fullText
-import com.accenture.base.extensions.firebaseError
-import com.accenture.base.extensions.isValid
-import com.accenture.base.extensions.observe
-import com.accenture.base.extensions.onClickNavigationUp
-import com.accenture.base.extensions.proDialogStop
+import com.accenture.base.extensions.*
 import com.accenture.base.model.ApiState
 import com.accenture.base.model.Note
 import com.accenture.note.databinding.FragmentNoteBinding
@@ -79,7 +72,7 @@ class NoteFragment : Fragment() {
         val note = Note(
             title = binding.inputTitle.fullText(),
             body = binding.inputNote.fullText(),
-            user = "null" //todo:temporal
+            user = requireContext().userLoad().id
         )
         notesViewModel.addNote(note)
     }

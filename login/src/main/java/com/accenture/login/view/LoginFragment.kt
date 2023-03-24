@@ -8,13 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.accenture.base.REQUIRED_VALUE
-import com.accenture.base.extensions.firebaseError
-import com.accenture.base.extensions.observe
-import com.accenture.base.extensions.proDialogStop
-import com.accenture.base.extensions.fullText
-import com.accenture.base.extensions.proDialogRun
-import com.accenture.base.extensions.bottomSheet
-import com.accenture.base.extensions.isValid
+import com.accenture.base.extensions.*
 import com.accenture.base.model.ApiState
 import com.accenture.base.model.User
 import com.accenture.base.model.ResultApiState
@@ -88,6 +82,7 @@ class LoginFragment : Fragment() {
             }
             is ResultApiState.Success -> {
                 proDialogStop()
+                requireContext().userSave(result.value)
                 findNavController().navigate(R.id.action_login_to_home)
             }
             else -> {
