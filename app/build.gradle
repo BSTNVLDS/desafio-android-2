@@ -16,9 +16,9 @@ android {
     }
     signingConfigs {
         release {
-            keyAlias System.getenv("KEY_ALIAS_NOTE")
+            keyAlias System.getenv("KEY_ALIAS_NOTES")
             keyPassword System.getenv("KEY_PASSWORD_NOTE")
-            storeFile file(String.valueOf(System.getenv("KEY_STORE_PATH_NOTE")))
+            storeFile file("${System.getenv("KEY_STORE_PATH_NOTES")}")
             storePassword System.getenv("KEY_STORE_PASSWORD_NOTE")
         }
     }
@@ -33,6 +33,7 @@ android {
             debuggable true
         }
         release {
+            signingConfig signingConfigs.release
             applicationIdSuffix = ".release"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.normal'
