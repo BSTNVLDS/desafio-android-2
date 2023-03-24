@@ -10,3 +10,6 @@ const val ERROR_AUTH_PASSWORD = "Tu contraseña debe tener un minimo de 6 Caract
 const val ERROR_AUTH_NO_RECENT = "reinicia la sesión y vuelve a intentar"
 const val ERROR_AUTH_GENERIC = "Verifique sus datos"
 const val ERROR_INTERNET = "Verifique tu conexion"
+const val EXCEPTION_NO_FIND = "no encontrado"
+const val EXCEPTION_NO_FIND_ADVANCE = "error en la solicitud"
+const val EXCEPTION_VERIFY_EMAIL = "verifica tu correo"
