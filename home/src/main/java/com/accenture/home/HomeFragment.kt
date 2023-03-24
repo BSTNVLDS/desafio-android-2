@@ -1,4 +1,4 @@
-package com.bprocs.dashboard
+package com.accenture.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.accenture.home.R
 import com.accenture.home.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -20,7 +19,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.viewBtnAddNote.setOnClickListener {
-           // findNavController().navigate(R.id.action_home_to_note)
+            findNavController().navigate(R.id.action_home_to_note)
         }
     }
 }
